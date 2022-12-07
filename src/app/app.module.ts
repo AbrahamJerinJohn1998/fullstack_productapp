@@ -7,6 +7,7 @@ import { AddproductComponent } from './addproduct/addproduct.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ViewproductComponent } from './viewproduct/viewproduct.component';
+import { SearchproductComponent } from './searchproduct/searchproduct.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -14,18 +15,19 @@ const myRoute:Routes=[
   },
   {
     path:"view",
-    component:
+    component:ViewproductComponent
   },
   {
     path:"search",
-    component:
+    component:SearchproductComponent
   }
 ]
 @NgModule({
   declarations: [
     AppComponent,
     AddproductComponent,
-    ViewproductComponent
+    ViewproductComponent,
+    SearchproductComponent
   ],
   imports: [
     BrowserModule,

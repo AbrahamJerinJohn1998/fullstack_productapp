@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3 m-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <label for="" class="form-label">Product Code</label>
+                    <input type="text" name="pcode" [(ngModel)]="pcode" class="form-control">
+
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValue()" class="btn btn-success">Search</button>
+
+                </div>
+            </div>
+            <div class="row m-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <table class="table table-bordered border-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product Code</th>
+                                <th scope="col">Product name</th>
+                                <th scope="col">Manufaturing date</th>
+                                <th scope="col">Expiry date</th>
+                                <th scope="col">Branch</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Distributor name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let i of searchData">
+                                <td>{{i.pcode}}</td>
+                                <td>{{i.pname}}</td>
+                                <td>{{i.mfgdate}}</td>
+                                <td>{{i.expdate}}</td>
+                                <td>{{i.branch}}</td>
+                                <td>{{i.price}}</td>
+                                 <td>{{i.distributorname}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
