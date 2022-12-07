@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ViewproductComponent } from './viewproduct/viewproduct.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -23,7 +24,8 @@ const myRoute:Routes=[
 @NgModule({
   declarations: [
     AppComponent,
-    AddproductComponent
+    AddproductComponent,
+    ViewproductComponent
   ],
   imports: [
     BrowserModule,
