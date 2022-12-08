@@ -2,35 +2,36 @@
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <h5>ProductApp</h5>
-       <table class="table table-striped">
-        <thead>
-        <tr>
-            <th scope="col">Product Code</th>
-            <th scope="col">Product name</th>
-            <th scope="col">Manufaturing date</th>
-            <th scope="col">Expiry date</th>
-            <th scope="col">Branch</th>
-            <th scope="col">Price</th>
-            <th scope="col">Distributor name</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let i of data">
-            <td>{{i.pcode}}</td>
-            <td>{{i.pname}}</td>
-            <td>{{i.mfgdate}}</td>
-            <td>{{i.expdate}}</td>
-            <td>{{i.branch}}</td>
-            <td>{{i.price}}</td>
-            <td>{{i.distributorname}}</td>
-        </tr>  
-    </tbody>
-       </table>
+
+            <div class="container">
+            <div class="row g-3">
+               
+             
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3" *ngFor="let i of view">
+
+                    <div class="card" style="height:30rem">
+                        <img height="200px" src="{{i.image}}" class="card-img-top" alt="...">
+                        
+                        <div class="card-body">
+                        <h5 class="card-title">Product code:{{i.productCode}} </h5>
+                        <p class="card-text">Product Name :{{i.productName}}</p>
+                        <p class="card-text">Brand :{{i.brand}}</p>
+                        <p class="card-text">Price:{{i.price}}</p>
+                        <p class="card-text">expiryDate:{{i.expiryDate}}</p>
+                     
+
+
+                        </div>
+                    </div>
+
+                </div>
+                
+           
+
+                
+            </div>
+            </div>
+
         </div>
     </div>
 </div>
-
-
-
-

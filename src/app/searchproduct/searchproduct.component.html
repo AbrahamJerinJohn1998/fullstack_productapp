@@ -7,7 +7,7 @@
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
                     <label for="" class="form-label">Product Code</label>
-                    <input type="text" name="pcode" [(ngModel)]="pcode" class="form-control">
+                    <input  name="productCode" [(ngModel)]="productCode" type="text" class="form-control">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -27,18 +27,20 @@
                                 <th scope="col">Expiry date</th>
                                 <th scope="col">Branch</th>
                                 <th scope="col">Price</th>
+                                <th scope="col">Seller Name</th>
                                 <th scope="col">Distributor name</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let i of searchData">
-                                <td>{{i.pcode}}</td>
-                                <td>{{i.pname}}</td>
-                                <td>{{i.mfgdate}}</td>
-                                <td>{{i.expdate}}</td>
-                                <td>{{i.branch}}</td>
+                                <td>{{i.productCode}}</td>
+                                <td>{{i.productName}}</td>
+                                <td>{{i.manufacturingDate}}</td>
+                                <td>{{i.expiryDate}}</td>
+                                <td>{{i.brand}}</td>
                                 <td>{{i.price}}</td>
-                                 <td>{{i.distributorname}}</td>
+                                <td>{{i.sellerName}}</td>
+                                 <td>{{i.distributorName}}</td>
                             </tr>
                         </tbody>
                     </table>

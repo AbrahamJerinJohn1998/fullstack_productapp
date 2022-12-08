@@ -8,19 +8,19 @@ import { ApiService } from '../api.service';
 })
 export class SearchproductComponent {
 
-  pcode=""
+  productCode=""
   constructor(private api:ApiService){}
   searchData:any=[]
   readValue=()=>
   {
-    let data:any={"pcode":this.pcode}
+    let data:any={"productCode":this.productCode}
     console.log(data)
-    this.api.searchProducts(data).subscribe(
+    this.api.searchProduct(data).subscribe(
       (response:any)=>
       {
         console.log(response)
         if (response.length==0) {
-          alert("Invalid coursetitle")
+          alert("Invalid product code")
           
         } else {
           this.searchData=response
